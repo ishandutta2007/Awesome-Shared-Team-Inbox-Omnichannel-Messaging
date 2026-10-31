@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.10)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.08); }
+      }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(2deg); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(10px) rotate(-2deg); }
+      }
+      @keyframes flowData {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pingDot {
+        0% { r: 4px; opacity: 1; }
+        100% { r: 12px; opacity: 0; }
+      }
+
+      .ambient-orb {
+        animation: pulseGlow 6s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      .floating-card-1 {
+        animation: floatSlow1 5s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: floatSlow2 6s ease-in-out infinite;
+      }
+      .flow-path {
+        stroke-dasharray: 8, 8;
+        animation: flowData 2.5s linear infinite;
+      }
+      .beacon-ring {
+        animation: pingDot 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Overlay -->
+  <g opacity="0.12" stroke="#94a3b8" stroke-width="0.75">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Ambient Light Orbs in Background -->
+  <circle class="ambient-orb" cx="180" cy="100" r="140" fill="#38bdf8" opacity="0.25" filter="url(#glow)" />
+  <circle class="ambient-orb" cx="1020" cy="260" r="160" fill="#a855f7" opacity="0.22" filter="url(#glow)" />
+  <circle class="ambient-orb" cx="600" cy="320" r="110" fill="#6366f1" opacity="0.2" filter="url(#glow)" />
+
+  <!-- Animated Dynamic Data Transmission Streams in Background -->
+  <g fill="none" opacity="0.45">
+    <path class="flow-path" d="M 80 180 C 220 180, 260 90, 420 90" stroke="#38bdf8" stroke-width="2.5" />
+    <path class="flow-path" d="M 80 180 C 220 180, 260 270, 420 270" stroke="#818cf8" stroke-width="2.5" />
+    <path class="flow-path" d="M 780 90 C 940 90, 980 180, 1120 180" stroke="#c084fc" stroke-width="2.5" />
+    <path class="flow-path" d="M 780 270 C 940 270, 980 180, 1120 180" stroke="#38bdf8" stroke-width="2.5" />
+  </g>
+
+  <!-- Left Dynamic Channel Cards (Behind text hierarchy) -->
+  <g class="floating-card-1" opacity="0.85">
+    <rect x="50" y="70" width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <circle cx="75" cy="96" r="14" fill="#0284c7" />
+    <text x="75" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">✉</text>
+    <text x="100" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#e2e8f0">Email Inbox</text>
+    <text x="100" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#38bdf8">Live Syncing</text>
+  </g>
+
+  <g class="floating-card-2" opacity="0.85">
+    <rect x="50" y="235" width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <circle cx="75" cy="261" r="14" fill="#16a34a" />
+    <text x="75" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">💬</text>
+    <text x="100" y="259" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#e2e8f0">WhatsApp / SMS</text>
+    <text x="100" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#4ade80">Connected</text>
+  </g>
+
+  <!-- Right Dynamic Channel Cards (Behind text hierarchy) -->
+  <g class="floating-card-2" opacity="0.85">
+    <rect x="970" y="70" width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <circle cx="995" cy="96" r="14" fill="#9333ea" />
+    <text x="995" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">⚡</text>
+    <text x="1020" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#e2e8f0">Omnichannel Hub</text>
+    <text x="1020" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#c084fc">Unified Feed</text>
+  </g>
+
+  <g class="floating-card-1" opacity="0.85">
+    <rect x="970" y="235" width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <circle cx="995" cy="261" r="14" fill="#0ea5e9" />
+    <text x="995" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">🤖</text>
+    <text x="1020" y="259" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#e2e8f0">AI Copilot &amp; Bots</text>
+    <text x="1020" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#38bdf8">Auto Triage</text>
+  </g>
+
+  <!-- Central Foreground Badge / Pill -->
+  <g>
+    <rect x="475" y="44" width="250" height="28" rx="14" fill="rgba(99, 102, 241, 0.25)" stroke="#6366f1" stroke-width="1" />
+    <circle class="beacon-ring" cx="493" cy="58" r="4" fill="#38bdf8" />
+    <circle cx="493" cy="58" r="4" fill="#38bdf8" />
+    <text x="506" y="63" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11" fill="#c7d2fe" letter-spacing="1">CURATED AWESOME ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Hero Titles & Subtitle in Foreground (Clear & Unobstructed) -->
+  <text x="600" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="38" fill="url(#titleGrad)" text-anchor="middle" letter-spacing="-0.5">
+    Shared Team Inbox
+  </text>
+  <text x="600" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="30" fill="#f8fafc" text-anchor="middle" letter-spacing="-0.5">
+    &amp; Omnichannel Messaging
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#94a3b8" text-anchor="middle">
+    Collaborative Customer Support • Live Chat • Team Inboxes • Open-Source Alternatives
+  </text>
+
+  <!-- Feature Tags / Tech Stack Pills -->
+  <g>
+    <g transform="translate(290, 252)">
+      <rect width="130" height="30" rx="8" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="65" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#e2e8f0" text-anchor="middle">📬 Shared Inboxes</text>
+    </g>
+
+    <g transform="translate(432, 252)">
+      <rect width="155" height="30" rx="8" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="77.5" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#e2e8f0" text-anchor="middle">🌐 Multi-Channel Chat</text>
+    </g>
+
+    <g transform="translate(599, 252)">
+      <rect width="145" height="30" rx="8" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="72.5" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#e2e8f0" text-anchor="middle">🛡️ Self-Hosted OSS</text>
+    </g>
+
+    <g transform="translate(756, 252)">
+      <rect width="155" height="30" rx="8" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="77.5" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#e2e8f0" text-anchor="middle">⚡ Collision Detection</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#titleGrad)" />
+</svg>
