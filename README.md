@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?syyle=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Mentioned in Awesome" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Shared-Team-Inbox-Omnichannel-Messaging/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -66,7 +66,7 @@ The sector displays a **moderately fragmented** market structure: while enterpri
 
 *Sorted in descending order by GitHub stargazers count.* ⭐
 
-| Project | Stars | Primary Architecture | License | Description & Differentiator |
+| Project | GitHub_Stars | Primary Architecture | License | Description & Differentiator |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Chatwoot](https://github.com/chatwoot/chatwoot)** 💬 | [![Stars](https://img.shields.io/github/stars/chatwoot/chatwoot?style=social&color=white)](https://github.com/chatwoot/chatwoot/stargazers) | Ruby on Rails, Vue.js, PostgreSQL, Redis | MIT | Full-featured omnichannel customer engagement platform. Unifies website live chat, WhatsApp, Twitter/X, Facebook, SMS, and email. Includes Captain AI agent and multi-inbox routing. |
 | **[Papercups](https://github.com/papercups-io/papercups)** ☕ | [![Stars](https://img.shields.io/github/stars/papercups-io/papercups?style=social&color=white)](https://github.com/papercups-io/papercups/stargazers) | Elixir / Phoenix, TypeScript, React | MIT | Open-source customer messaging platform. Embeddable chat widget, Slack & Microsoft Teams two-way sync, email forwarding, and customizable shared inbox UI. |
@@ -112,7 +112,7 @@ The sector displays a **moderately fragmented** market structure: while enterpri
 Contributions, new tools, and updates are very welcome! 💡
 
 1. 🍴 Fork this repository.
-2. 📝 Add your tool to the corresponding table with verified pricing or star count.
+2. 📝 Add your tool to the corresponding table with verified pricing or Stars_Count.
 3. 🔍 Keep descriptions factual, objective, and concise.
 4. 🚀 Submit a Pull Request with a clear title and summary.
 
